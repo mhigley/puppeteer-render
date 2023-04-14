@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 require("dotenv").config();
 
-const testLogic = async (res) => {
+const exampleLogic = async (res) => {
     const browser = await puppeteer.launch({
         args: [
             "--disable-setuid-sandbox",
@@ -136,4 +136,4 @@ const testLogic = async (res) => {
 
 }
 
-module.exports = {testLogic}
+module.exports = {exampleLogic}

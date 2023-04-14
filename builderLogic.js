@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 require("dotenv").config();
 
-const testLogic = async (res) => {
+const builderLogic = async (res) => {
     const browser = await puppeteer.launch({
         args: [
             "--shm-size=1gb",
@@ -137,4 +137,4 @@ const testLogic = async (res) => {
 
 }
 
-module.exports = {testLogic}
+module.exports = {builderLogic}
