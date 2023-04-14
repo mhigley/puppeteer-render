@@ -1,11 +1,21 @@
 const express = require('express');
-const { scrapeLogic } = require('./scrapeLogic');
+const { demoLogic } = require('./demoLogic');
+const { exampleLogic } = require('./exampleLogic');
+const { builderLogic } = require('./builderLogic');
 const app = express();
 
 const PORT = process.env.PORT || 4000;
 
-app.get("/scrape", (req, res) => {
-    scrapeLogic(res);
+app.get('/demo', (req, res) => {
+    demoLogic(res);
+});
+
+app.get("/example", (req, res) => {
+    exampleLogic(res);
+});
+
+app.get("/builders", (req, res) => {
+    builderLogic(res);
 });
 
 app.get("/", (req, res) => {
